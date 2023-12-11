@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Help Desk App
 
-## Getting Started
+Getting Started
 
-First, run the development server:
+Start with an .env file with the contents:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+PORT=3000
+NEXT_PUBLIC_REACT_APP_API_URL=http://localhost:4000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Once completed, run the following commands:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ npm install
+ npm run dev
+ 
+in a new terminal:
+ cd server
+ ts-node app.ts
+ 
+Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+HOMEPAGE:
+<img width="1680" alt="Screenshot 2023-12-11 at 6 58 57 AM" src="https://github.com/tko0/help-desk-app/assets/110485485/f9e6b195-b3e3-4eff-a586-079cbc53d466">
+Welcoming landing page introducing users to the help desk system.
 
-## Learn More
+NAVIGATION BAR:
 
-To learn more about Next.js, take a look at the following resources:
+Clear and intuitive navigation for easy access to main sections.
+Responsive design for a seamless user experience across components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+HELP DESK FORM:
+<img width="1680" alt="Screenshot 2023-12-11 at 6 59 27 AM" src="https://github.com/tko0/help-desk-app/assets/110485485/a76abc35-47bc-4b7e-8247-bb6674a378df">
+User-friendly form for submitting support ticket requests.
+Required fields include Name, Email, Subject, and Problem Description.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+MENU:
 
-## Deploy on Vercel
+Dropdown menu providing quick links to essential features.
+Organized categories for efficient navigation and task execution.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ADMIN VIEW:
+<img width="1680" alt="Screenshot 2023-12-11 at 6 59 11 AM" src="https://github.com/tko0/help-desk-app/assets/110485485/6f2d3078-7dab-4bdd-a348-5b01f186717c">
+Overview page for support staff to see a summary list of all tickets.
+Ticket management capabilities, including filters, searching, responding to requests and updating ticket status.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+COMING SOON:
+<img width="1680" alt="Screenshot 2023-12-11 at 6 59 18 AM" src="https://github.com/tko0/help-desk-app/assets/110485485/560afc62-e93e-48c1-8cb9-4eba8904fc22">
+Teaser for upcoming features or sections to generate user anticipation.
+Stay tuned to social media for enhancements and additional functionalities.
+
+FUTURE IMPLEMENTATIONS:
+User controls and authentification for Admin Panel
+Ability to assign and appoint tickets to individuals
+More efficient routing between components
