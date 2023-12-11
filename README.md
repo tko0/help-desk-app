@@ -65,6 +65,8 @@ Organized categories for efficient navigation and task execution.
 
 ### ADMIN VIEW:
 <img width="1680" alt="Screenshot 2023-12-11 at 6 59 11 AM" src="https://github.com/tko0/help-desk-app/assets/110485485/6f2d3078-7dab-4bdd-a348-5b01f186717c">
+<img width="1680" alt="Screenshot 2023-12-11 at 10 33 29 AM" src="https://github.com/tko0/help-desk-app/assets/110485485/e4fa4a1b-24f5-49ac-b33a-3270d3f3a040">
+
 Overview page for support staff to see a summary list of all tickets.
 Ticket management capabilities, including filters, searching, responding to requests and updating ticket status.
 
