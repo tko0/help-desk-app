@@ -91,15 +91,6 @@ const AdminPanel: React.FC = () => {
     setEndDate(e.target.value);
   };
 
-  const handleApplyFilter = () => {
-    if (startDate && endDate) {
-      setAppliedFilter(`${startDate} - ${endDate}`);
-      setStartDate(null);
-      setEndDate(null);
-      setShowDateFilter(false);
-    }
-  };
-
   const handleRemoveFilter = () => {
     setAppliedFilter(null);
   };
@@ -224,13 +215,6 @@ const AdminPanel: React.FC = () => {
                   )}
                 </div>
               </div>
-              <button
-                className={`mt-2 bg-gray-600 text-white py-2 px-4 rounded with-line ${startDate && endDate ? '' : 'opacity-50 cursor-not-allowed'}`}
-                onClick={handleApplyFilter}
-                disabled={!startDate || !endDate}
-              >
-                Apply Filter
-              </button>
             </div>
           )}
         </div>
