@@ -1,4 +1,5 @@
 const { sql } = require('@vercel/postgres');
+const db = require('../db');
 
 module.exports = async function updateTicketStatus(req, res) {
   try {
