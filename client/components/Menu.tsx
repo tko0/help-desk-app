@@ -1,51 +1,51 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+// import React from 'react';
+// import Link from 'next/link';
+// import { useRouter } from 'next/router';
 
-interface MenuProps {
-  isOpen: boolean;
-  menuIconPosition: { top: number; left: number };
-}
+// interface MenuProps {
+//   isOpen: boolean;
+//   menuIconPosition: { top: number; left: number };
+// }
 
-const Menu: React.FC<MenuProps> = ({ isOpen, menuIconPosition }) => {
-  const navigate = useNavigate();
+// const Menu: React.FC<MenuProps> = ({ isOpen, menuIconPosition }) => {
+//   const router = useRouter();
 
-  if (!isOpen) {
-    return null;
-  }
+//   if (!isOpen) {
+//     return null;
+//   }
 
-  const { top, left } = menuIconPosition;
+//   const { left } = menuIconPosition;
 
-  const redirectToComingSoon = () => {
-    navigate('/coming-soon');
-  };
+//   return (
+//     <div
+//       style={{
+//         position: 'fixed',
+//         top: `calc(64px + 4px)`,
+//         right: `calc(min(100vw - 280px, max(8px, ${left}px)))`,
+//         zIndex: 50,
+//       }}
+//       className="bg-gray-800 border border-neutral-900 rounded p-2 shadow-md text-right"
+//     >
+//       <Link href="/coming-soon">
+//         <a className="text-white font-bold mb-2">Healthspan</a>
+//       </Link>
+//       <Link href="/coming-soon">
+//         <a className="text-white font-bold mb-2">Vibrant Living</a>
+//       </Link>
+//       <Link href="/coming-soon">
+//         <a className="text-white font-bold mb-2">Longevity</a>
+//       </Link>
+//       <Link href="/coming-soon">
+//         <a className="text-white font-bold mb-2">Science Backed Tools</a>
+//       </Link>
+//       <Link href="/coming-soon">
+//         <a className="text-white font-bold mb-2">General Health</a>
+//       </Link>
+//       <Link href="/help-desk-form">
+//         <a className="text-blue-500 font-bold no-underline">Contact Us</a>
+//       </Link>
+//     </div>
+//   );
+// };
 
-  return (
-    <div
-      className="fixed top-[calc(64px+4px)] right-[calc(min(100vw-280px, max(8px, left)))] z-50 bg-gray-800 border border-neutral-900 rounded p-2 shadow-md text-right"
-    >
-      <div className="text-white font-bold mb-2" onClick={redirectToComingSoon}>
-        Healthspan
-      </div>
-      <div className="text-white font-bold mb-2" onClick={redirectToComingSoon}>
-        Vibrant Living
-      </div>
-      <div className="text-white font-bold mb-2" onClick={redirectToComingSoon}>
-        Longevity
-      </div>
-      <div className="text-white font-bold mb-2" onClick={redirectToComingSoon}>
-        Science Backed Tools
-      </div>
-      <div className="text-white font-bold mb-2" onClick={redirectToComingSoon}>
-        General Health
-      </div>
-      <Link
-        to="/help-desk-form"
-        className="text-blue-500 font-bold no-underline"
-      >
-        Contact Us
-      </Link>
-    </div>
-  );
-};
-
-export default Menu;
+// export default Menu;
