@@ -17,7 +17,7 @@ const HelpDeskForm: React.FC = () => {
       }
       console.log('Submitting Ticket:', { name, email, subject, problemDescription });
 
-      const response = await fetch(`${process.env.POSTGRES_URL_NON_POOLING}/api/submit-ticket`, {
+      const response = await fetch(`/api/submit-ticket`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

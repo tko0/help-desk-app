@@ -16,7 +16,7 @@ const AdminPanel: React.FC = () => {
   const [selectedTicket, setSelectedTicket] = useState<Ticket | null>(null);
 
   useEffect(() => {
-    axios.get<Ticket[]>(`${process.env.POSTGRES_URL_NON_POOLING}/api/get-tickets`)
+    axios.get<Ticket[]>(`/api/get-tickets`)
       .then(response => {
         setTickets(response.data);
       })
