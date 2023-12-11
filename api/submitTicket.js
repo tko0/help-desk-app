@@ -1,7 +1,6 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
-import { sql } from '@vercel/postgres';
+const { sql } = require('@vercel/postgres');
 
-export default async function submitTicket(req: VercelRequest, res: VercelResponse) {
+module.exports = async function submitTicket(req, res) {
   try {
     const { name, email, subject, problemDescription } = req.body;
 
@@ -21,4 +20,4 @@ export default async function submitTicket(req: VercelRequest, res: VercelRespon
     console.error('Error submitting ticket:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
-}
+};

@@ -1,7 +1,6 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
-import { sql } from '@vercel/postgres';
+const { sql } = require('@vercel/postgres');
 
-export default async function getTickets(_req: VercelRequest, res: VercelResponse) {
+module.exports = async function getTickets(_req, res) {
   try {
     const tickets = await sql`SELECT * FROM Tickets;`;
     res.json(tickets);
@@ -9,4 +8,4 @@ export default async function getTickets(_req: VercelRequest, res: VercelRespons
     console.error('Error fetching tickets:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
-}
+};

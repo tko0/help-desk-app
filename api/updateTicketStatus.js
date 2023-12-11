@@ -1,7 +1,6 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
-import { sql } from '@vercel/postgres';
+const { sql } = require('@vercel/postgres');
 
-export default async function updateTicketStatus(req: VercelRequest, res: VercelResponse) {
+module.exports = async function updateTicketStatus(req, res) {
   try {
     const { ticketId, newStatus } = req.body;
 
@@ -26,4 +25,4 @@ export default async function updateTicketStatus(req: VercelRequest, res: Vercel
     console.error('Error updating ticket status:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
-}
+};
