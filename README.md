@@ -29,7 +29,7 @@ NEXT_PUBLIC_REACT_APP_API_URL=http://localhost:4000
 ```
 
 
-Once completed, run the following commands:
+Once completed, run the following commands from the root directory of the repository:
 ```
  npm install
  nvm use 18.17.0 (if necessary)
