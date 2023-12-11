@@ -37,11 +37,13 @@ Once completed, run the following commands:
 ```
 
  
-in a new terminal:
+and in a new terminal:
 ```
  cd server
  ts-node app.ts
 ```
+http://localhost:3000 should then bring you to the Bioverse homepage.
+
 ## Key Features
 
 ### HOMEPAGE:
@@ -78,4 +80,3 @@ Stay tuned to social media for enhancements and additional functionalities.
 ## FUTURE IMPLEMENTATIONS:
 User controls and authentification for Admin Panel.
 Ability to assign and appoint tickets to individuals.
-More efficient routing between components
