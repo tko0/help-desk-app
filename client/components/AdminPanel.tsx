@@ -14,7 +14,6 @@ const AdminPanel: React.FC = () => {
   const [filteredTickets, setFilteredTickets] = useState<Ticket[]>([]);
   const [searchText, setSearchText] = useState<string>('');
   const [selectedTicket, setSelectedTicket] = useState<Ticket | null>(null);
-  const [isDateFilterActive, setIsDateFilterActive] = useState(false);
 
   useEffect(() => {
     axios.get<Ticket[]>(`${process.env.POSTGRES_URL_NON_POOLING}/api/getTickets`)
