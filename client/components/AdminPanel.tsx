@@ -17,8 +17,8 @@ const AdminPanel: React.FC = () => {
   const [isDateFilterActive, setIsDateFilterActive] = useState(false);
 
   useEffect(() => {
-    axios.get<Ticket[]>(`${process.env.NEXT_PUBLIC_REACT_APP_API_URL}/tickets`)
-    .then(response => {
+    axios.get<Ticket[]>(`${process.env.POSTGRES_URL_NON_POOLING}/api/getTickets`)
+      .then(response => {
         setTickets(response.data);
       })
       .catch(error => console.error('Error fetching tickets:', error));
